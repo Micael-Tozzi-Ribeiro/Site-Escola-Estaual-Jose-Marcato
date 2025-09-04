@@ -1,0 +1,503 @@
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Estilo Geral ===== */
+body {
+    font-family: 'Montserrat', "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222;
+    color: white;
+}
+
+/* ===== Faixa Superior com logos ===== */
+.top-bar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    border-bottom: 2px solid #ffd700;
+}
+
+.logo-container img {
+    height: 50px;
+    max-width: 100%;
+}
+
+/* ===== Faixa com contatos, redes sociais e nome da escola ===== */
+.top-bar-name {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 3px solid #ffd700;
+    position: relative;
+}
+
+/* Container de ícones sociais */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.social-icons a {
+    color: #FFD700;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Nome da escola centralizado */
+.school-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.school-name p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    background-color: #FFD700;
+    color: #000;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ccc;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 55px;
+    margin-right: 12px;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    background-color: #FFD700;
+    color: #000;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ccc;
+}
+
+/* ===== Menu de Navegação ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #222;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.ativo::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    background-color: transparent;
+    color: #000;
+}
+
+/* ===== Banner ===== */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(65%);
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px 35px;
+    border-radius: 6px;
+    max-width: 600px;
+}
+
+.banner-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.banner-texto p {
+    font-size: 1rem;
+}
+
+/* ===== Conteúdo Principal ===== */
+main section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 16px;
+  border-bottom: 3px solid #ffd700;
+  padding-bottom: 8px;
+}
+
+main section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  text-align: justify;
+}
+
+.link-saiba-mais {
+  color: #FFD700;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: color 0.3s ease;
+}
+
+.link-saiba-mais:hover,
+.link-saiba-mais:focus {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.quem-somos {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.quem-somos h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  font-weight: 700;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #ffd700;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.caixas-quem-somos {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.caixa {
+  background: #333;
+  border: 2px solid #b8860b;
+  border-radius: 12px;
+  padding: 25px 20px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  transition: box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.caixa:hover {
+  box-shadow: 0 12px 30px rgba(184, 134, 11, 0.35);
+}
+
+.caixa h3 {
+  color: #FFD700;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.caixa p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .caixas-quem-somos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caixa {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+.gestao {
+  max-width: 800px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.gestao h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  font-weight: 700;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ffd700;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.gestao-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gestao-table thead {
+  background-color: #FFD700;
+  color: white;
+}
+
+.gestao-table th,
+.gestao-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ffd700;
+  text-align: left;
+}
+
+.gestao-table tbody tr:hover {
+  background-color: #333;
+}
+
+.gestao-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .gestao-table thead {
+    display: none;
+  }
+  .gestao-table,
+  .gestao-table tbody,
+  .gestao-table tr,
+  .gestao-table td {
+    display: block;
+    width: 100%;
+  }
+  .gestao-table tr {
+    margin-bottom: 15px;
+  }
+  .gestao-table td {
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #ffd700;
+    text-align: left;
+  }
+  .gestao-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-weight: 700;
+    color: #b8860b;
+  }
+}
+
+
+
+/* ===== Rodapé ===== */
+footer {
+    background-color: #222; /* Fundo escuro */
+    color: #eee; /* Texto claro */
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 3px solid #FFD700; /* Linha amarela */
+    font-size: 0.95rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer .footer-item {
+    min-width: 220px;
+    max-width: 300px;
+    text-align: left;
+}
+
+footer .footer-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFD700; /* Título amarelo */
+}
+
+footer .footer-item p,
+footer .footer-item a {
+    margin: 6px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+footer .footer-item a:hover {
+    text-decoration: underline;
+}
+
+.map-link {
+    color: #eee;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.map-link i {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+
+/* Container para copyright separado */
+footer .copyright {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer .footer-item {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .banner-texto {
+        padding: 15px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustes para a faixa superior na responsividade */
+    .top-bar-name {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        position: static;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .school-name {
+        position: static;
+        text-align: center;
+        transform: none;
+        white-space: normal;
+        font-size: 1.5rem;
+    }
+}

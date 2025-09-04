@@ -1,0 +1,420 @@
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Estilo Geral ===== */
+body {
+    font-family: 'Montserrat', "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222;
+    color: white;
+}
+
+/* ===== Faixa Superior com logos ===== */
+.top-bar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    border-bottom: 2px solid #ffd700;
+}
+
+.logo-container img {
+    height: 50px;
+    max-width: 100%;
+}
+
+/* ===== Faixa com contatos, redes sociais e nome da escola ===== */
+.top-bar-name {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 3px solid #ffd700;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.social-icons a {
+    color: #FFD700;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.school-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.school-name p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    background-color: #FFD700;
+    color: #000;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ccc;
+}
+
+/* ===== Menu de Navegação ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #222;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.ativo::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    background-color: transparent;
+    color: #000;
+}
+
+/* ===== Banner ===== */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(65%);
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 25px 35px;
+    border-radius: 6px;
+    max-width: 600px;
+}
+
+.banner-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.banner-texto p {
+    font-size: 1rem;
+}
+
+/* ===== Conteúdo Principal ===== */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.destaques {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.destaques h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #FFD700;
+    font-weight: 600;
+    border-bottom: 3px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.cards article {
+    background: #333;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.cards article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cards article h3 {
+    padding: 15px 20px;
+    background: #FFD700;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cards article p {
+    padding: 15px 20px;
+    color: white;
+    flex-grow: 1;
+}
+
+.cards article .btn-saiba-mais {
+    display: block;
+    margin: 15px 20px 20px 20px;
+    padding: 10px 18px;
+    background-color: #222;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cards article .btn-saiba-mais:hover {
+    background-color:  #FFD700;
+    color: #000;
+}
+
+/* ===== Plataformas Educacionais ===== */
+.plataformas {
+    text-align: center;
+    margin: 60px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.plataformas h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+.plataformas-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.plataformas-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.plataformas-icons a i {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.plataformas-icons a:hover {
+    color: white;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 3px solid #FFD700;
+    font-size: 0.95rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer .footer-item {
+    min-width: 220px;
+    max-width: 300px;
+    text-align: left;
+}
+
+footer .footer-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+footer .footer-item p,
+footer .footer-item a {
+    margin: 6px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+footer .footer-item a:hover {
+    text-decoration: underline;
+}
+
+.map-link {
+    color: #eee;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.map-link i {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+footer .copyright {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .banner-texto {
+        padding: 15px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-bar-name {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        position: static;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .school-name {
+        position: static;
+        text-align: center;
+        transform: none;
+        white-space: normal;
+        font-size: 1.5rem;
+    }
+
+    .plataformas-icons {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer .footer-item {
+        max-width: 100%;
+        text-align: center;
+    }
+}

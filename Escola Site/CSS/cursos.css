@@ -1,0 +1,357 @@
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ===== Faixa Superior com Logos ===== */
+/* ===== Faixa Superior com logos ===== */
+.top-bar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    border-bottom: 2px solid #ffd700;
+}
+
+.logo-container img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.top-bar-name {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 3px solid #ffd700;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.social-icons a {
+    color: #FFD700;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.school-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.school-name p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    background-color: #FFD700;
+    color: #000;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ccc;
+}
+
+/* ===== Menu de Navegação ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #222;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.ativo::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    background-color: transparent;
+    color: #000;
+}
+
+
+/* ===== Banner ===== */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-texto h2 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.banner-texto p {
+    font-size: 1.2rem;
+}
+
+/* ===== Conteúdo Geral ===== */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+/* ===== Introdução ===== */
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* ===== Grid de Cursos ===== */
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.curso-card {
+    background-color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.curso-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.curso-card h3 {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin: 15px;
+}
+
+.curso-card p {
+    font-size: 1rem;
+    color: #ddd;
+    padding: 0 15px 20px;
+}
+
+/* ===== Duração ===== */
+.duracao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.duracao h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.duracao p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #eee;
+}
+
+/* ===== Chamada Final ===== */
+.cta {
+    text-align: center;
+    background-color: #333;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #e6c200;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 3px solid #FFD700;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer .footer-item {
+    min-width: 220px;
+    max-width: 300px;
+    text-align: left;
+}
+
+footer .footer-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+footer .footer-item p,
+footer .footer-item a {
+    margin: 6px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+footer .footer-item a:hover {
+    text-decoration: underline;
+}
+
+footer .copyright {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    .school-name {
+        position: static;
+        transform: none;
+        font-size: 1.4rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner-texto h2 {
+        font-size: 1.8rem;
+    }
+}
