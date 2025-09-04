@@ -338,22 +338,53 @@ footer .copyright {
 
 /* ===== Responsividade ===== */
 @media (max-width: 768px) {
-    .school-name {
-        position: static;
-        transform: none;
-        font-size: 1.4rem;
-    }
-
     nav ul {
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
+        margin-top: 15px;
     }
 
-    .banner {
-        height: 200px;
+    .banner-texto {
+        padding: 15px 20px;
     }
 
-    .banner-texto h2 {
-        font-size: 1.8rem;
+
+    .top-bar-name {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        position: static;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .school-name {
+        position: static;
+        text-align: center;
+        transform: none;
+        white-space: normal;
+        font-size: 1.5rem;
+    }
+
+    .plataformas-icons {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer .footer-item {
+        max-width: 100%;
+        text-align: center;
     }
 }
