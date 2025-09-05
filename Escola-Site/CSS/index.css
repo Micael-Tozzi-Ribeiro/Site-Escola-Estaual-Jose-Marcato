@@ -36,6 +36,8 @@
         max-width: 100%;
     }
 
+
+
     /* ===== Faixa com o nome da escola ===== */
     .top-bar-name {
         background-color: #222;
@@ -368,7 +370,9 @@
         text-align: center;
     }
 
-    /* ===== Redes Sociais no Footer ===== */
+
+
+        /* ===== Redes Sociais no Footer ===== */
     footer .social-icons {
         display: grid;
         grid-template-columns: 30px auto;
@@ -401,6 +405,8 @@
         /* no hover muda ícone e texto juntos */
     }
 
+
+    
     /* ===== Responsividade ===== */
     @media (max-width: 768px) {
         nav ul {
