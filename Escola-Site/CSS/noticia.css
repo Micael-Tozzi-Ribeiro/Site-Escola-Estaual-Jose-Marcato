@@ -7,8 +7,8 @@
 
 html,
 body {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* ===== Estilo Geral ===== */
@@ -19,11 +19,12 @@ body {
   --muted: #666;
   --bg: #ffffff;
   --card: #ffffff;
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-md: 0 6px 18px rgba(0,0,0,0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -237,7 +238,8 @@ main {
 .cards {
   display: flex;
   justify-content: center;
-  align-items: stretch;           /* garante mesma altura por linha */
+  align-items: stretch;
+  /* garante mesma altura por linha */
   flex-wrap: wrap;
   gap: 25px;
 }
@@ -248,10 +250,13 @@ main {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   width: 340px;
-  display: flex;                  /* para alinhar botão no fundo */
-  flex-direction: column;         /* empilha conteúdo */
+  display: flex;
+  /* para alinhar botão no fundo */
+  flex-direction: column;
+  /* empilha conteúdo */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 470px;              /* ajuda a equalizar alturas */
+  min-height: 470px;
+  /* ajuda a equalizar alturas */
 }
 
 .cards article:hover {
@@ -278,7 +283,8 @@ main {
 .cards article p {
   padding: 15px 20px;
   color: #444;
-  flex: 1 1 auto;                 /* ocupa o espaço e empurra o botão pra baixo */
+  flex: 1 1 auto;
+  /* ocupa o espaço e empurra o botão pra baixo */
 }
 
 /* Botão igual altura/posição */
@@ -293,7 +299,8 @@ main {
   font-size: 1rem;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  align-self: flex-start;          /* mantém alinhado à esquerda */
+  align-self: flex-start;
+  /* mantém alinhado à esquerda */
 }
 
 .cards article .btn-saiba-mais:hover {
@@ -302,7 +309,8 @@ main {
 }
 
 /* ===== Seções de Filtros / Galeria (tema claro) ===== */
-.wrap {                             /* caso use .wrap em notícias/galeria */
+.wrap {
+  /* caso use .wrap em notícias/galeria */
   padding: 25px;
   max-width: 1200px;
   margin: auto;
@@ -384,6 +392,53 @@ main {
   object-fit: cover;
   display: block;
 }
+
+.card-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  padding-top: 62.5%; /* 16:10 -> mesmo das imagens */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Modal de vídeo expandido ===== */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-modal video {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.video-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 .meta {
   padding: 15px;

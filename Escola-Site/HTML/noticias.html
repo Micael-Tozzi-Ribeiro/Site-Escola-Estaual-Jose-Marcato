@@ -87,12 +87,16 @@
             </article>
 
             <article class="card" data-category="natureza">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5oxPH4mnnQQE7qxUntqL7bSXfbGELN3vMHQ&s"
-                    alt="Floresta densa" />
+                <div class="card-video">
+                    <video src="../IMAGENS/uscs-ds.mp4" controls>
+                        Seu navegador não suporta a reprodução de vídeo.
+                    </video>
+                </div>
                 <div class="meta"><strong>Floresta densa</strong><br><span class="muted">Natureza</span>
                 </div>
-
             </article>
+
+
 
             <!-- Pessoas -->
             <article class="card" data-category="pessoas">
@@ -227,6 +231,23 @@
                 if (sortVal === 'za') return collator.compare(titleB, titleA);
                 return 0;
             });
+
+            document.querySelectorAll(".card video").forEach(video => {
+                video.addEventListener("click", () => {
+                    const modal = document.createElement("div");
+                    modal.classList.add("video-modal");
+                    modal.innerHTML = `
+                        <span class="close-btn">&times;</span>
+                        <video src="${video.getAttribute("src")}" controls autoplay></video>
+                        `;
+                    document.body.appendChild(modal);
+
+                    modal.querySelector(".close-btn").addEventListener("click", () => {
+                        modal.remove();
+                    });
+                });
+            });
+
 
             // Mostrar / ocultar
             cards.forEach(card => card.style.display = 'none');
