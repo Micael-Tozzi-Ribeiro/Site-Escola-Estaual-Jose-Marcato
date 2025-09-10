@@ -61,7 +61,6 @@ body {
   font-size: 1rem;
   border-bottom: 3px solid #ffd700;
   position: relative;
-
   min-height: 60px;
 }
 
@@ -239,7 +238,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  /* garante mesma altura por linha */
   flex-wrap: wrap;
   gap: 25px;
 }
@@ -251,12 +249,9 @@ main {
   box-shadow: var(--shadow-sm);
   width: 340px;
   display: flex;
-  /* para alinhar botão no fundo */
   flex-direction: column;
-  /* empilha conteúdo */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 470px;
-  /* ajuda a equalizar alturas */
 }
 
 .cards article:hover {
@@ -264,11 +259,14 @@ main {
   box-shadow: var(--shadow-md);
 }
 
-.cards article img {
+.cards article img,
+.cards article video {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16/10;
   object-fit: cover;
   flex: 0 0 auto;
+  display: block;
+  border-radius: 6px;
 }
 
 .cards article h3 {
@@ -284,7 +282,6 @@ main {
   padding: 15px 20px;
   color: #444;
   flex: 1 1 auto;
-  /* ocupa o espaço e empurra o botão pra baixo */
 }
 
 /* Botão igual altura/posição */
@@ -300,7 +297,6 @@ main {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
   align-self: flex-start;
-  /* mantém alinhado à esquerda */
 }
 
 .cards article .btn-saiba-mais:hover {
@@ -310,7 +306,6 @@ main {
 
 /* ===== Seções de Filtros / Galeria (tema claro) ===== */
 .wrap {
-  /* caso use .wrap em notícias/galeria */
   padding: 25px;
   max-width: 1200px;
   margin: auto;
@@ -379,6 +374,8 @@ main {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+
 }
 
 .card:hover {
@@ -386,30 +383,18 @@ main {
   box-shadow: var(--shadow-md);
 }
 
-.card img {
+.card img,
+.card video {
   width: 100%;
   aspect-ratio: 16/10;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
+
+  /* impede o vídeo de expandir o card */
+  max-height: 100%;
 }
 
-.card-video {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  padding-top: 62.5%; /* 16:10 -> mesmo das imagens */
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-.card-video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* ===== Modal de vídeo expandido ===== */
 .video-modal {
@@ -438,7 +423,6 @@ main {
   color: #fff;
   cursor: pointer;
 }
-
 
 .meta {
   padding: 15px;
@@ -559,9 +543,7 @@ footer .copyright {
 footer .social-icons {
   display: grid;
   grid-template-columns: 30px auto;
-  /* primeira coluna só para ícones */
   gap: 10px 12px;
-  /* linha, coluna */
   align-items: center;
 }
 
@@ -569,12 +551,10 @@ footer .social-icons i {
   font-size: 1.3rem;
   color: #FFD700;
   justify-self: center;
-  /* centraliza ícones na coluna */
 }
 
 footer .social-icons a {
   display: contents;
-  /* permite que o ícone e o texto ocupem colunas diferentes */
   color: #FFD700;
   font-size: 1rem;
   font-weight: 500;
@@ -585,9 +565,7 @@ footer .social-icons a {
 footer .social-icons a:hover i,
 footer .social-icons a:hover span {
   color: #fff;
-  /* no hover muda ícone e texto juntos */
 }
-
 
 /* ===== Responsividade ===== */
 @media (max-width: 900px) {
