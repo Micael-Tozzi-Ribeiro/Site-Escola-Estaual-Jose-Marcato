@@ -589,3 +589,12 @@ footer .social-icons a:hover span {
     font-size: 1.5rem;
   }
 }
+
+.micaeltr {
+    color: white;
+    text-decoration: none;
+}
+
+.micaeltr:hover {
+    text-decoration: underline;
+}

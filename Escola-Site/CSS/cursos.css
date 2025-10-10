@@ -434,3 +434,12 @@ footer .social-icons a:hover span {
         text-align: center;
     }
 }
+
+.micaeltr {
+    color: white;
+    text-decoration: none;
+}
+
+.micaeltr:hover {
+    text-decoration: underline;
+}

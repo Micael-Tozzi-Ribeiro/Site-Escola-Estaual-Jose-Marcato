@@ -344,3 +344,25 @@ footer .social-icons a:hover span {
     border-radius: 8px;
     flex-shrink: 0; /* impede que a imagem encolha */
 }
+
+.micaeltr {
+    color: white;
+    text-decoration: none;
+}
+
+.micaeltr:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer .footer-item {
+        max-width: 100%;
+        text-align: center;
+    }
+}
